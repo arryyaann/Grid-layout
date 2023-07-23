@@ -1,5 +1,3 @@
-/** @format */
-
 :root {
   --clr-accent-400: hsl(157 60% 50%);
   --clr-secondary-400: hsl(0 74% 55%);
@@ -32,7 +30,7 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark light;
+  color-scheme: dark;
 }
 
 body {
@@ -104,7 +102,7 @@ body {
 .card__content {
   background: var(--clr-neutral-900);
   align-self: end;
-  margin: var(--spacing) var(--spacing) 2rem;
+  margin: var(--spacing) var(--spacing) 0 var(--spacing);
   padding: var(--spacing);
   box-shadow: 0 0.25rem 1rem hsl(0 0% 100% / 0.1);
 }
@@ -113,6 +111,8 @@ body {
   width: 100%;
   aspect-ratio: 1 / 1.25;
   object-fit: cover;
+
+  border-radius: 1em;
 }
 
 .card__title {
@@ -155,12 +155,13 @@ body {
 .main-title {
   font-family: var(--ff-accent);
   color: var(--clr-secondary-400);
-  font-size: clamp(2rem, 5vw + 1rem, 5rem);
+  font-size: clamp(3rem, 5vw + 1rem, 5rem);
   margin-bottom: 0.25em;
   width: fit-content;
   position: relative;
   z-index: 1;
 
   text-decoration: underline;
-  text-underline-offset: 0.25em;
+  text-decoration-color: var(--clr-accent-400);
+  text-underline-offset: 0.3em;
 }
